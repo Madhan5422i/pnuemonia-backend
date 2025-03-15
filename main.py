@@ -51,7 +51,8 @@ def load_model():
     # Load model
     model = models.resnet18(pretrained=False)
     model.fc = torch.nn.Linear(model.fc.in_features, 2)
-    model.load_state_dict(torch.load('./models/chest_xray_resnet_model.pth'))
+    model.load_state_dict(torch.load(
+        './models/chest_xray_resnet_model.pth', map_location=device))
     model = model.to(device)
     model.eval()
 
@@ -243,5 +244,5 @@ def ratelimit_handler(e):
 load_model()
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    # app.run(host='0.0.0.0', port=5000, debug=False)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)
