@@ -26,4 +26,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* ~/.cache/pip
 EXPOSE 5000
 
 # Run application
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "--access-logfile", "-", "main:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "--access-logfile", "-", "main:app"]
