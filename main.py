@@ -18,7 +18,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 # Configure CORS
 CORS(app, resources={
     r"/predict": {
-        "origins": ["http://localhost:5173", "https://*.madhan.xyz"],
+        "origins": ["http://localhost:5173", "https://project.madhan.xyz"],
         "methods": ["POST"],
         "allow_headers": ["Content-Type"]
     }
