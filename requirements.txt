@@ -1,7 +1,9 @@
 Flask==3.0.0
-torch==2.2.0
-torchvision==0.17.0
+torch==2.1.2
+torchvision==0.16.2
 Pillow==10.1.0
 Flask-CORS==4.0.0
 Flask-Limiter==3.5.0
 numpy<2
+-f https://download.pytorch.org/whl/cpu
+gunicorn==21.2.0
